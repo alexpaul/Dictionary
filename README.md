@@ -14,6 +14,25 @@ struct Dictionary<Key, Value> where Key: Hashable
 ## Creating a dictionary 
 
 ```swift 
+var capitals = [String: String]() // initializer syntax 
+```
+
+```swift 
+var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4]] // dictionary literal 
+```
+
+## Iterating over a dictionary 
+
+```swift 
+var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4]]
+
+for (stack, classes) in cohorts {
+  print("\(stack) has \(classes.count) classes: \(classes)")
+}
+/*
+web has 2 classes: [6.2, 6.4]
+iOS has 2 classes: [6.1, 6.3]
+*/
 ```
 
 ## Runtime operations on a dictionary 
