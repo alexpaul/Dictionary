@@ -1,7 +1,20 @@
 # Dictionary
 
-Swift's Dictionary.
+Swift's Dictionary. A dictionary is a collection of key, value pairs. The `key` is required to conform to the `Hashable` protocol.
 
+```swift 
+struct Dictionary<Key, Value> where Key: Hashable
+```
+
+> Apple documentation: A dictionary is a type of hash table, providing fast access to the entries it contains. Each entry in the table is identified using its key, > which is a hashable type such as a string or number. You use that key to retrieve the corresponding value, which can be any object. In other languages, similar data types are known as hashes or associated arrays.
+
+> Recall: Hash table is an abstract data type. 
+
+
+## Creating a dictionary 
+
+```swift 
+```
 
 ## `updateValue(:_, forKey:_)`
 
