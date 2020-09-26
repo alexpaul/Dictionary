@@ -85,5 +85,5 @@ print("new language for web \(webValue)")
 ## Resources 
 
 1. [Apple Documentation - dictionary](https://developer.apple.com/documentation/swift/dictionary)
-2. [Swift Programming Guide - Collections](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
+2. [Swift Programming Guide - Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 
