@@ -40,6 +40,11 @@ iOS has 2 classes: [6.1, 6.3]
 ```swift 
 ```
 
+## Creating a frequency dictionary 
+
+```swift 
+```
+
 ## Tranforming a dictionary 
 
 ```swift 
