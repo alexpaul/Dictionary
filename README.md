@@ -10,6 +10,14 @@ struct Dictionary<Key, Value> where Key: Hashable
 
 > Recall: Hash table is an abstract data type. 
 
+<details>
+  <summary>Hash Table</summary> 
+  
+```swift 
+```
+
+</details> 
+
 
 ## Creating a dictionary 
 
