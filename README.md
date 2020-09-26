@@ -45,6 +45,16 @@ iOS has 2 classes: [6.1, 6.3]
 ```swift 
 ```
 
+#### Practice 
+
+<details>
+  <summary>Solution</summary> 
+  
+```swift 
+```
+  
+</details> 
+
 ## Tranforming a dictionary 
 
 ```swift 
