@@ -16,6 +16,16 @@ struct Dictionary<Key, Value> where Key: Hashable
 ```swift 
 ```
 
+## Runtime operations on a dictionary 
+
+```swift 
+```
+
+## Tranforming a dictionary 
+
+```swift 
+```
+
 ## `updateValue(:_, forKey:_)`
 
 ```swift 
