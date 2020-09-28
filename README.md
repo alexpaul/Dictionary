@@ -122,24 +122,16 @@ print(availableAttendance) // ["Heather": 90, "James": 85, "Robert": 75]
 
 ## `updateValue(:_, forKey:_)`
 
+Use `updateValue(:_, forKey:_)` if you need to know whether there was a previous value when updating the value for a key. 
+
 ```swift 
-var dict = ["iOS": "Obj-C", "android" : "Java" ]
+var dict = ["iOS": "Objective-C", "Android" : "Java" ]
 
-
-if let oldValue = dict.updateValue("javascript", forKey: "web") {
-  print("\(oldValue) was used for iOS progrmming")
+if let oldValue = dict.updateValue("Swift", forKey: "iOS") {
+  print("old valus was \(oldValue)")
 } else {
   print("no value existed before")
 }
-
-let newValue = dict["iOS"] ?? ""
-
-let webValue = dict["web"] ?? ""
-
-
-print("new language is \(newValue)")
-
-print("new language for web \(webValue)")
 ```
 
 ## Challenges 
