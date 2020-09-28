@@ -92,9 +92,8 @@ print("new language for web \(webValue)")
 
 ## Challenges 
 
-#### Challenge 1 - Occurences of n or more 
+#### Challenge 1 - Numbers appearing n or more times in an array.
 
-MARK: Question 2 INCOMPLETE
 Write a function that takes in an array of integers (arr) and a number (n)
 You function should return an array with only numbers appearing n or more times.
 Your solution must work in O(n) time.
