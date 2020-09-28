@@ -147,6 +147,8 @@ let age = hashTable["Cameron"] ?? 100
 print(age)
 ```
 
+[YouTube - Hash Table Implementation](https://www.youtube.com/watch?v=58GbN9iBZWM)
+
 </details> 
 
 
