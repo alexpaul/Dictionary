@@ -298,6 +298,20 @@ if let oldValue = dict.updateValue("Swift", forKey: "iOS") {
 
 CRUD - Create, Read, Update, Delete, Search
 
+## Runtime vs Compile time errors 
+
+#### Runtime error 
+
+```swift 
+var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4], "iOS": [1.0]] // [String: Double]
+// key duplication is a runtime error: Fatal error: Dictionary literal contains duplicate keys: file Swift/Dictionary.swift, line 826
+```
+
+#### Compile time error 
+
+```swift 
+var people = [Person: Int]() // compile time error 
+```
 
 
 ## Challenges 
