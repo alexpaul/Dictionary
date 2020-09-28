@@ -13,6 +13,8 @@ struct Dictionary<Key, Value> where Key: Hashable
 <details>
   <summary>Hash Table</summary> 
   
+## [YouTube - Hash Table Implementation](https://www.youtube.com/watch?v=58GbN9iBZWM)
+  
 ```swift 
 import UIKit
 
@@ -146,9 +148,6 @@ if let age = hashTable["Alex"] {
 let age = hashTable["Cameron"] ?? 100
 print(age)
 ```
-
-[YouTube - Hash Table Implementation](https://www.youtube.com/watch?v=58GbN9iBZWM)
-
 </details> 
 
 
