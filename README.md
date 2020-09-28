@@ -289,6 +289,11 @@ if let oldValue = dict.updateValue("Swift", forKey: "iOS") {
 }
 ```
 
+## Built-in types that are similar to dictionary 
+
+* UserDefaults
+* NSCache 
+
 ## Challenges 
 
 #### Challenge 1 - Numbers appearing n or more times in an array.
