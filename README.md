@@ -45,27 +45,79 @@ iOS has 2 classes: [6.1, 6.3]
 
 ## Runtime operations on a dictionary 
 
+| Operation | Runtime |
+|:----:|:-----:|
+| Search | O(1) |
+| Insertion | O(1) |
+| Deletion | O(1) |
+
+
 ```swift 
+var dict = ["September": ["Labor Day"], "October" : ["Columbus Day"], "November" : ["Thanksgiving Day"]]
+
+// search
+if let holidays = dict["September"] { // O(1)
+  print(holidays)
+}
+
+// insertion
+dict["November"]?.append("Veterans Day") // O(1)
+
+print("dictionary after insertion: \(dict)")
+
+// deletion
+dict["October"] = nil // O(1)
+
+print("dictionary after deletion: \(dict)")
 ```
 
 ## Creating a frequency dictionary 
 
 ```swift 
+var freqDict = [String: Int]()
+
+let languages = ["Javascript","Swift","Python","C++","Javascript","Python","C++","Javascript","C++","Python","Javascript","Swift","Javascript"]
+
+for language in languages {
+  if let count = freqDict[language] {
+    freqDict[language] = count + 1
+  } else {
+    freqDict[language] = 1
+  }
+}
+
+print(freqDict) // ["Javascript": 5, "C++": 3, "Swift": 2, "Python": 3]
 ```
 
-#### Practice 
-
-<details>
-  <summary>Solution</summary> 
-  
-```swift 
-```
-  
-</details> 
 
 ## Tranforming a dictionary 
 
+#### `mapValues((Value) -> T)`
+
+> Apple documentation: Returns a new dictionary containing the keys of this dictionary with the values transformed by the given closure.
+
 ```swift 
+let tranformedDict = freqDict.mapValues { count -> String in
+  if count > 2 {
+    return "Popular"
+  } else {
+    return "Not Popular"
+  }
+}
+
+print(tranformedDict) // ["C++": "Popular", "Swift": "Popular", "Javascript": "Popular", "Cobol": "Not Popular", "Python": "Popular"]
+```
+
+#### `compactMapValues((Value) -> T?)`
+
+> Apple documentation: Returns a new dictionary containing only the key-value pairs that have non-nil values as the result of transformation by the given closure.
+
+```swift 
+let classAttendance = ["Rachel": nil, "James": 85, "Heather": 90, "Tim": nil, "Esther": nil, "Robert": 75]
+
+let availableAttendance = classAttendance.compactMapValues { $0 }
+
+print(availableAttendance) // ["Heather": 90, "James": 85, "Robert": 75]
 ```
 
 ## `updateValue(:_, forKey:_)`
