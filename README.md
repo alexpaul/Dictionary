@@ -294,6 +294,12 @@ if let oldValue = dict.updateValue("Swift", forKey: "iOS") {
 * UserDefaults
 * NSCache 
 
+## Be able to perform the following operations for understanding 
+
+CRUD - Create, Read, Update, Delete, Search
+
+
+
 ## Challenges 
 
 #### Challenge 1 - Numbers appearing n or more times in an array.
