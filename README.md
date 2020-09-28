@@ -14,14 +14,6 @@ struct Dictionary<Key, Value> where Key: Hashable
   <summary>Hash Table</summary> 
   
 [YouTube - Hash Table Implementation](https://www.youtube.com/watch?v=58GbN9iBZWM)
-
-
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/58GbN9iBZWM" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
-
   
 ```swift 
 import UIKit
