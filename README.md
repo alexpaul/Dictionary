@@ -90,6 +90,35 @@ print("new language is \(newValue)")
 print("new language for web \(webValue)")
 ```
 
+## Challenges 
+
+#### Challenge 1 - Occurences of n or more 
+
+MARK: Question 2 INCOMPLETE
+Write a function that takes in an array of integers (arr) and a number (n)
+You function should return an array with only numbers appearing n or more times.
+Your solution must work in O(n) time.
+
+Example:
+Input: [1,3,4,1,9,1,3,4,3,1,2], 3
+Output: [1,3]
+
+#### Challenge 2 - How many numbers are smaller that the current number
+
+[LeetCode](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
+
+#### Challenge 3 - Find Words That Can Be Formed by Characters
+
+[LeetCode](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/)
+
+#### Challenge 4 - Design HashMap 
+
+[LeetCode](https://leetcode.com/problems/design-hashmap/)
+
+#### Challenge 5 - Group Anagrams 
+
+[LeetCode](https://leetcode.com/problems/group-anagrams/)
+
 ## Resources 
 
 1. [Apple Documentation - dictionary](https://developer.apple.com/documentation/swift/dictionary)
