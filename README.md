@@ -220,6 +220,30 @@ for language in languages {
 print(freqDict) // ["Javascript": 5, "C++": 3, "Swift": 2, "Python": 3]
 ```
 
+## `default` value 
+
+Use `default` if you rather using a prescribed value as opposed to `nil`
+
+```swift 
+var allowances = ["Miles": 10, "Norah": 10]
+
+print(allowances["Miles", default: 0]) // 10
+
+print(allowances["Alex", default: 0]) // 0
+```
+
+## Refactor our creating of a frequency dictionary using `default` value
+
+```swift 
+var freqDict = [String: Int]()
+let languages = ["Javascript","Swift","Python","C++","Javascript","Python","C++","Javascript","C++","Python","Javascript","Swift","Javascript"]
+
+for language in languages {
+  freqDict[language, default: 0] += 1
+}
+
+print(freqDict) // ["Swift": 2, "Python": 3, "C++": 3, "Javascript": 5]
+```
 
 ## Tranforming a dictionary 
 
