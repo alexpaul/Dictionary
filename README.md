@@ -150,7 +150,7 @@ print(age)
 ```
 </details> 
 
-## Creating a dictionary 
+## 1. Creating a dictionary 
 
 ```swift 
 var capitals = [String: String]() // initializer syntax 
@@ -160,7 +160,7 @@ var capitals = [String: String]() // initializer syntax
 var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4]] // dictionary literal 
 ```
 
-## Iterating over a dictionary 
+## 2. Iterating over a dictionary 
 
 ```swift 
 var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4]]
@@ -174,7 +174,7 @@ iOS has 2 classes: [6.1, 6.3]
 */
 ```
 
-## Runtime operations on a dictionary 
+## 3. Runtime operations on a dictionary 
 
 | Operation | Runtime |
 |:----:|:-----:|
@@ -202,7 +202,7 @@ dict["October"] = nil // O(1)
 print("dictionary after deletion: \(dict)")
 ```
 
-## Creating a frequency dictionary 
+## 4. Creating a frequency dictionary 
 
 ```swift 
 var freqDict = [String: Int]()
@@ -220,7 +220,7 @@ for language in languages {
 print(freqDict) // ["Javascript": 5, "C++": 3, "Swift": 2, "Python": 3]
 ```
 
-## `default` value 
+## 5. `default` value 
 
 Use `default` if you rather using a prescribed value as opposed to `nil`
 
@@ -232,7 +232,7 @@ print(allowances["Miles", default: 0]) // 10
 print(allowances["Alex", default: 0]) // 0
 ```
 
-## Refactor our creating of a frequency dictionary using `default` value
+## 6. Refactor our creating of a frequency dictionary using `default` value
 
 ```swift 
 var freqDict = [String: Int]()
@@ -245,7 +245,7 @@ for language in languages {
 print(freqDict) // ["Swift": 2, "Python": 3, "C++": 3, "Javascript": 5]
 ```
 
-## Tranforming a dictionary 
+## 7. Tranforming a dictionary 
 
 #### `mapValues((Value) -> T)`
 
@@ -275,7 +275,7 @@ let availableAttendance = classAttendance.compactMapValues { $0 }
 print(availableAttendance) // ["Heather": 90, "James": 85, "Robert": 75]
 ```
 
-## `updateValue(:_, forKey:_)`
+## 8. `updateValue(:_, forKey:_)`
 
 Use `updateValue(:_, forKey:_)` if you need to know whether there was a previous value when updating the value for a key. 
 
@@ -289,12 +289,12 @@ if let oldValue = dict.updateValue("Swift", forKey: "iOS") {
 }
 ```
 
-## Built-in types that are similar to dictionary 
+## 9. Built-in types that are similar to dictionary 
 
 * UserDefaults
 * NSCache 
 
-## Be able to perform the following operations for understanding 
+## 10. Be able to perform the following operations for understanding 
 
 CRUD - Create, Read, Update, Delete, Search
 
@@ -314,7 +314,7 @@ var people = [Person: Int]() // compile time error
 ```
 
 
-## Challenges 
+## 11. Challenges 
 
 #### Challenge 1 - Numbers appearing n or more times in an array.
 
