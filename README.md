@@ -345,7 +345,7 @@ extension Person {
 }
 ```
 
-Using the dictionary initializer `init(grouping:by:)` we get back a dictionry of type `[String: [Person]]`
+Using the dictionary initializer `init(grouping:by:)` we get back a dictionary of type `[String: [Person]]`
 
 ```swift 
 let peopleDict = Dictionary(grouping: Person.people, by: { $0.gender }) // [String : [Person]]
