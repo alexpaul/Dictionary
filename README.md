@@ -313,8 +313,61 @@ var cohorts = ["iOS": [6.1, 6.3], "web": [6.2, 6.4], "iOS": [1.0]] // [String: D
 var people = [Person: Int]() // compile time error 
 ```
 
+## 11. Create a dictionary grouping from a given array
 
-## 11. Challenges 
+Using the [`init(grouping:by:)`](https://developer.apple.com/documentation/swift/dictionary/3127163-init) initializer we can pass in a given closure and an array and get back a dictionary where for example below, the keys are the `gender` and the values are an array of people categorized by that given `gender`. 
+
+
+Below we have a Person object and a created array people `[Person]`
+
+```swift 
+struct Person {
+  let name: String
+  let gender: String
+}
+
+extension Person {
+  static var people: [Person] {
+    return [
+      Person(name: "Alex", gender: "Male"),
+      Person(name: "Kim", gender: "Female"),
+      Person(name: "Robert'", gender: "Male"),
+      Person(name: "Tom", gender: "Male"),
+      Person(name: "James", gender: "Male"),
+      Person(name: "Tisha", gender: "Female"),
+      Person(name: "Allison", gender: "Female"),
+      Person(name: "Jake", gender: "Male"),
+      Person(name: "Heather", gender: "Female"),
+      Person(name: "Rachel", gender: "Female"),
+      Person(name: "Cindy", gender: "Female")
+    ]
+  }
+}
+```
+
+Using the dictionary initializer `init(grouping:by:)` we get back a dictionry of type `[String: [Person]]`
+
+```swift 
+let peopleDict = Dictionary(grouping: Person.people, by: { $0.gender }) // [String : [Person]]
+
+for (gender, people) in peopleDict {
+  print("====== \(gender) ======")
+  print(people)
+  print("\n")
+}
+
+/*
+====== Female ======
+[__lldb_expr_33.Person(name: "Kim", gender: "Female"), __lldb_expr_33.Person(name: "Tisha", gender: "Female"), __lldb_expr_33.Person(name: "Allison", gender: "Female"), __lldb_expr_33.Person(name: "Heather", gender: "Female"), __lldb_expr_33.Person(name: "Rachel", gender: "Female"), __lldb_expr_33.Person(name: "Cindy", gender: "Female")]
+
+
+====== Male ======
+[__lldb_expr_33.Person(name: "Alex", gender: "Male"), __lldb_expr_33.Person(name: "Robert\'", gender: "Male"), __lldb_expr_33.Person(name: "Tom", gender: "Male"), __lldb_expr_33.Person(name: "James", gender: "Male"), __lldb_expr_33.Person(name: "Jake", gender: "Male")]
+*/
+```
+
+
+## 12. Challenges 
 
 #### Challenge 1 - Numbers appearing n or more times in an array.
 
